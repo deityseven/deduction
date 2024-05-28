@@ -1,8 +1,10 @@
 #ifndef CHAOS_H
 #define CHAOS_H
 
-//混沌之外全是道
-class Chaos
+#include "intertwine.h"
+
+//混沌
+class Chaos : public Intertwine
 {
 public:
     void run();

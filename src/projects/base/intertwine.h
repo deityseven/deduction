@@ -7,6 +7,11 @@
 //交织
 class Intertwine : public Real, public Vritual
 {
+
+    
+private:
+    double vritualRatio;
+    double realRatio;
 };
 
 #endif
