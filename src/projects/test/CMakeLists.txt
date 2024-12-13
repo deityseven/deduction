@@ -4,29 +4,8 @@ project(test)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-#全局moc
-set(CMAKE_AUTOMOC ON)
-
-#使用rcc处理qrc
-set(IMAGE_RCCS ${CMAKE_SOURCE_DIR}/src/resource/resource.qrc)
-qt5_add_resources(IMAGE_RCC_SRCS ${IMAGE_RCCS})
-
-#ui文件
-file(GLOB uis "${CMAKE_SOURCE_DIR}/src/ui/*.ui")
-
-#uic
-QT5_WRAP_UI(UI_FILES
-  ${uis}
-)
-
-set(UI_SRC
-	${uis}
-)
-
 set(MAIN_SRC
 	main.cpp
-	inv.h
-	inv.cpp
 )
 
 set(SRCS
@@ -82,8 +61,4 @@ set_property(TARGET ${PROJECT_NAME} PROPERTY VS_DEBUGGER_ENVIRONMENT "Path=$(Pat
 
 #链接库
 target_link_libraries(${PROJECT_NAME}
-  ${Qt5Core_LIBRARIES}
-  ${Qt5Gui_LIBRARIES}
-  ${Qt5Widgets_LIBRARIES}
-  ${Qt5Network_LIBRARIES}
 )

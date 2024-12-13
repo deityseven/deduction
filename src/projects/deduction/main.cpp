@@ -1,7 +1,4 @@
-#include <spdlog/spdlog.h>
 #include <util/string_util.h>
-
-#include <base/chaos.h>
 
 int main(int argc, char *argv[])
 {
@@ -12,9 +9,6 @@ int main(int argc, char *argv[])
     //    spdlog::info("user info :");
     //    spdlog::info("{}", client.getCurrentUser()->toJson());
     //}
-
-    Chaos chaos;
-    chaos.run();
 
 	return 0;
 }
